@@ -1,95 +1,141 @@
-/* General Styling */
+
+
+/* Styling form and resume sections */
 
 body {
-font-family:'Arial', sans-serif;
-background-color: rgb(211, 180, 143);
-margin:0;
-padding:160px
+    font-family: 'Times New Roman', Times, serif;
+    margin: 20px;
+    padding: 0;
+    background-color: white;
+}
+
+form {
+    margin: auto;
+    background-color: rgb(228, 242, 255);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    max-width: 600px;
+}
+
+h1 {
+    text-align: center;
+    color: black;
+}
+
+fieldset {
+    border: 2px solid skyblue;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: aliceblue;
+}
+
+legend {
+    font-weight: bold;
+    text-align: left;
+    color: rgb(34, 29, 29);
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+    color: black;
 
 }
 
-.resume-container{
-display: flex;
-background-color: rgb(179, 176, 164);
-width:100%;
-margin: 0 auto;
-border: radius 13px;
-box-shadow: 0 0 20px
-
+input,textarea {
+    margin-top: 4px;
+    padding: 8px;
+    width: calc(100% - 1px);
+    border: 1px solid skyblue;
+    border-radius: 4px;
+    box-sizing: border-box;
 }
 
-.left-section{
-
-color:rgb(10, 10, 9);
-padding:30px;
-width:40%;
-text-align: center;
-border-right: 6px sienna;
-
-}
- 
-.profile-picture{
-width: 140;
-height: 60px;
-border-radius: 50%;
-border: 5px rgb(15, 19, 12);
-margin-bottom: 20px;
-} 
-
-h1{
-font-size: 25px;
-margin: 10px 0;
-margin-bottom: 30px;
-text-align: center;
+button {
+    display: block;
+    width: 100%;
+    background-color: skyblue;
+    color: black;
+    border: none;
+    border-radius: 4px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    margin-top: 10px;
+    font-size: 18px;
+    font-family: 'Times New Roman', Times, serif;
+    padding: 10px;
+    cursor: pointer;
 }
 
-h3{
-font-size: 18p;
-padding:2%;
-margin:20px 0 10px;
-color:rgb(15, 14, 14);
-border-radius: 10px;
-box-shadow: 0 0 15px rgb(58, 85, 14);
-margin-top:5%;
-margin-bottom:5%;
+button :hover {
+    color: blue;
 }
 
-
-ul{
-list-style-type: fill round;
-padding:10;
-margin:10px 0;
+#resume-display {
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
+    border: 2px solid skyblue;
+    border-radius: 8px;
+    background-color: rgb(228, 242, 255);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    outline: none;
 }
 
-ul li{
-    margin: 5px o;
-}
-
-
-.right-section{
-padding: 20px;
-width: 70%;
-}
-
-
-button{
-
-font-family: Arial, sans-serif;
-border-radius:12px;
-box-shadow: 0 0 15px black;
-cursor:pointer;
-margin-top:10px;
-font-size:20px;
-}
-
-button:hover{
-
-background-color: brown;
-
+#resume-display h2 {
+    color: black;
 }
 
 
 
+
+
+/* TYPESCRIPT CODE: */
+
+
+  /* 
+    // Get references to the form and display area
+    let form =document.getElementById('resume-form') as HTMLFormElement;
+    let resumeDisplayElement = document.getElementById('resume-display') as HTMLDivElement;
+  
+    /* //Handle form submission */
+    /* form.addEventListener('submit', (event: Event) => { */
+      /* event.preventDefault(); //prevent page reload */
+  
+      /* //collect input values */
+      /* const name = (document.getElementById('name') as HTMLInputElement).value */
+      /* const email = (document.getElementById('email') as HTMLInputElement).value */
+      /* const phone = (document.getElementById('phone') as HTMLInputElement).value */
+      /* const education = (document.getElementById('education') as HTMLInputElement).value */
+      /* const experience = (document.getElementById('experience') as HTMLInputElement).value */
+      /* const skills = (document.getElementById('skills') as HTMLInputElement).value */
+  
+      /* // Generate the resume content dynamically */
+      /* const resumeHtml = `/ */
+        /* <h2> <b> Resume </b> </h2>/ */
+        /* <h3>Personal Information</h3> */
+        /* <p><b>Name:</b> ${name}</p> */
+        /* <p><b>Email:</b> ${email}</p> */
+        /* <p><b>Phone:</b> ${phone}</p> */
+  
+        /* <h3>Education</h3> */
+        /* <p>${education}</p> */
+  
+        /* <h3>Experience</h3> */
+        /* <p>${experience}</p> */
+  
+        /* <h3>Skills</h3> */
+        /* <p>${skills}</p> */
+      /* `; */
+  
+      /* //Display the generated resume */
+      /* if(resumeDisplayElement){ */
+        /* resumeDisplayElement.innerHTML = resumeHtml; */
+      /* }else { */
+        /* console.error('The resume display element is missing.'); */
+      /* }, */
+     /* }); 
 
 
 
